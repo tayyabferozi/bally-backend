@@ -24,6 +24,9 @@ router.post(
       .isNumeric({ min: 1 })
       .withMessage("Please include the production"),
     body("gLoss").isNumeric({ min: 1 }).withMessage("Please include the loss"),
+    body("gLossPercent")
+      .isNumeric({ min: 1 })
+      .withMessage("Please include the loss percentage"),
   ],
   checkValidity,
   recordControllers.addRecord

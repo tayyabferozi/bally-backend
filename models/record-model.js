@@ -7,6 +7,7 @@ const recordSchema = mongoose.Schema({
   gProduction: Number,
   gLoss: Number,
   date: String,
+  gLossPercent: Number,
   product: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "Product",

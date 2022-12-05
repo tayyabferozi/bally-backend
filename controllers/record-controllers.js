@@ -12,8 +12,16 @@ exports.getAllRecords = async (req, res) => {
 };
 
 exports.addRecord = async (req, res) => {
-  const { ballWeight, ballNum, batchNum, product, gProduction, gLoss, date } =
-    req.body;
+  const {
+    ballWeight,
+    ballNum,
+    batchNum,
+    product,
+    gProduction,
+    gLoss,
+    gLossPercent,
+    date,
+  } = req.body;
 
   try {
     const createdRecord = await Record.create({
@@ -23,6 +31,7 @@ exports.addRecord = async (req, res) => {
       product,
       gProduction,
       gLoss,
+      gLossPercent,
       date,
     });
 
